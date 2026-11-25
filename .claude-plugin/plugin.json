@@ -1,0 +1,14 @@
+{
+  "name": "laravel-php-skills",
+  "displayName": "Laravel & PHP Skills",
+  "version": "0.1.0",
+  "description": "Agent Skills for Laravel and modern PHP: security review, Eloquent N+1 detection, migration safety, queues and Horizon, Pest/PHPUnit testing, PHPStan/Larastan, performance and zero-downtime VPS deploys.",
+  "author": {
+    "name": "Saizul Amin",
+    "url": "https://github.com/saizul"
+  },
+  "homepage": "https://github.com/saizul/laravel-php-skills",
+  "repository": "https://github.com/saizul/laravel-php-skills",
+  "license": "MIT",
+  "keywords": ["laravel", "php", "eloquent", "phpstan", "larastan", "pest", "phpunit", "horizon", "security", "deployment"]
+}

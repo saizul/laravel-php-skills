@@ -1,0 +1,2 @@
+PHP Version => 8.3.6
+memory_limit => 256M => 256M

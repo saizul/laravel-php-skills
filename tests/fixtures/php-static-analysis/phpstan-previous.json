@@ -1,0 +1,84 @@
+{
+  "totals": {
+    "errors": 0,
+    "file_errors": 9
+  },
+  "files": {
+    "/home/runner/work/shop/shop/app/Http/Controllers/OrderController.php": {
+      "errors": 4,
+      "messages": [
+        {
+          "message": "Call to an undefined method Illuminate\\Database\\Eloquent\\Builder<App\\Models\\Order>::activ().",
+          "line": 22,
+          "ignorable": true,
+          "identifier": "method.notFound"
+        },
+        {
+          "message": "Method App\\Http\\Controllers\\OrderController::index() has no return type specified.",
+          "line": 18,
+          "ignorable": true,
+          "identifier": "missingType.return"
+        },
+        {
+          "message": "Called 'env' outside of the config directory which returns null when the config is cached, use 'config'.",
+          "line": 40,
+          "ignorable": true,
+          "identifier": "larastan.noEnvCallsOutsideOfConfig"
+        }
+      ]
+    },
+    "/home/runner/work/shop/shop/app/Models/Order.php": {
+      "errors": 3,
+      "messages": [
+        {
+          "message": "Method App\\Models\\Order::items() return type with generic class Illuminate\\Database\\Eloquent\\Relations\\HasMany does not specify its types: TRelatedModel",
+          "line": 14,
+          "ignorable": true,
+          "identifier": "missingType.generics"
+        },
+        {
+          "message": "Method App\\Models\\Order::scopeActive() has parameter $query with no type specified.",
+          "line": 20,
+          "ignorable": true,
+          "identifier": "missingType.parameter"
+        },
+        {
+          "message": "Method App\\Models\\Order::total() should return float but returns string.",
+          "line": 30,
+          "ignorable": true,
+          "identifier": "return.type"
+        }
+      ]
+    },
+    "/home/runner/work/shop/shop/app/Services/Checkout.php": {
+      "errors": 2,
+      "messages": [
+        {
+          "message": "Parameter #1 $amount of method App\\Services\\Payments::charge() expects int, float given.",
+          "line": 55,
+          "ignorable": true,
+          "identifier": "argument.type"
+        },
+        {
+          "message": "Method App\\Services\\Checkout::run() has no return type specified.",
+          "line": 12,
+          "ignorable": true,
+          "identifier": "missingType.return"
+        },
+        {
+          "message": "Variable $total might not be defined.",
+          "line": 70,
+          "ignorable": true,
+          "identifier": "variable.undefined"
+        },
+        {
+          "message": "Variable $tax might not be defined.",
+          "line": 71,
+          "ignorable": true,
+          "identifier": "variable.undefined"
+        }
+      ]
+    }
+  },
+  "errors": []
+}

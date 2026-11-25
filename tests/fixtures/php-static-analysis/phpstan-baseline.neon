@@ -1,0 +1,18 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Access to an undefined property App\\Models\\User\:\:\$profile\.$#'
+			identifier: property.notFound
+			count: 12
+			path: app/Http/Controllers/ProfileController.php
+
+		-
+			message: '#^Method App\\Models\\User\:\:posts\(\) return type with generic class Illuminate\\Database\\Eloquent\\Relations\\HasMany does not specify its types\: TRelatedModel$#'
+			identifier: missingType.generics
+			count: 1
+			path: app/Models/User.php
+
+		-
+			message: "#^Called 'env' outside of the config directory#"
+			count: 3
+			path: app/Services/Mailer.php

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Release artifacts (built by .github/workflows/release.yml)
+dist/
+
+# Output of the generator when run inside the repo
+/deploy-out/
+
+# Never commit real credentials or captured reports
+/.env
+/phpstan.json
+/failed_jobs.json
+/failed_jobs.tsv
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store

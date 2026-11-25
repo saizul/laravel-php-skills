@@ -1,0 +1,21 @@
+[
+ {
+  "query": "select * from `posts` limit 15",
+  "bindings": [],
+  "time": 1.1
+ },
+ {
+  "query": "select * from `users` where `users`.`id` in (1, 2, 3, 4)",
+  "bindings": [],
+  "time": 0.6
+ },
+ {
+  "query": "select `post_id`, count(*) as aggregate from `comments` where `post_id` in (?, ?, ?) group by `post_id`",
+  "bindings": [
+   1,
+   2,
+   3
+  ],
+  "time": 0.4
+ }
+]

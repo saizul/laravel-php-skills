@@ -1,0 +1,2 @@
+Note: Using configuration file /srv/app/phpstan.neon.
+{"totals": {"errors": 1, "file_errors": 3}, "files": {"/srv/app/src/Foo.php": {"errors": 2, "messages": [{"message": "Call to an undefined method App\\Foo::bar().", "line": 3, "ignorable": true}, {"message": "Call to an undefined method App\\Baz::qux().", "line": 9, "ignorable": true}]}, "/srv/app/src/Bar.php": {"errors": 1, "messages": [{"message": "Undefined variable: $x", "line": 4, "ignorable": false}]}}, "errors": ["Ignored error pattern #^Foo$# was not matched in reported errors."]}

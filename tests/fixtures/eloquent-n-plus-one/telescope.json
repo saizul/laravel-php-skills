@@ -1,0 +1,1051 @@
+[
+ {
+  "uuid": "u0",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `posts` order by `created_at` desc limit 15 offset 0",
+   "time": "1.20",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 18,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u1",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 1 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u2",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 1 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u3",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 2 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u4",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 2 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u5",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 3 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u6",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 3 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u7",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 4 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u8",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 4 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u9",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 5 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u10",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 5 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u11",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 6 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u12",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 6 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u13",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 7 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u14",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 7 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u15",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 8 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u16",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 8 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u17",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 9 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u18",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 9 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u19",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 10 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u20",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 10 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u21",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 11 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u22",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 11 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u23",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 12 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u24",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 12 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u25",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 13 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u26",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 13 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u27",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 14 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u28",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 14 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u29",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 15 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u30",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 15 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u31",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `posts` order by `created_at` desc limit 15 offset 0",
+   "time": "1.20",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 18,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u32",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 1 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u33",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 1 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u34",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 2 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u35",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 2 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u36",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 3 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u37",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 3 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u38",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 4 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u39",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 4 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u40",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 5 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u41",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 5 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u42",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 6 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u43",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 6 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u44",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 7 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u45",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 7 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u46",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 8 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u47",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 8 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u48",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 9 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u49",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 9 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u50",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 10 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u51",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 10 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u52",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 11 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u53",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 11 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u54",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 12 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u55",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 12 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u56",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 13 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u57",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 13 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u58",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 14 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u59",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 14 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u60",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `users` where `users`.`id` = 15 limit 1",
+   "time": "0.30",
+   "slow": false,
+   "file": "/var/www/app/resources/views/posts/index.blade.php",
+   "line": 12,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u61",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select count(*) as aggregate from `comments` where `comments`.`post_id` = 15 and `comments`.`post_id` is not null",
+   "time": "0.50",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 0,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u62",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `tags` inner join `post_tag` on `tags`.`id` = `post_tag`.`tag_id` where `post_tag`.`post_id` = 1",
+   "time": "0.20",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 21,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u63",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `tags` inner join `post_tag` on `tags`.`id` = `post_tag`.`tag_id` where `post_tag`.`post_id` = 2",
+   "time": "0.20",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 21,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u64",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `tags` inner join `post_tag` on `tags`.`id` = `post_tag`.`tag_id` where `post_tag`.`post_id` = 3",
+   "time": "0.20",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 21,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u65",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `tags` inner join `post_tag` on `tags`.`id` = `post_tag`.`tag_id` where `post_tag`.`post_id` = 4",
+   "time": "0.20",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 21,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u66",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `tags` inner join `post_tag` on `tags`.`id` = `post_tag`.`tag_id` where `post_tag`.`post_id` = 5",
+   "time": "0.20",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 21,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u67",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `tags` inner join `post_tag` on `tags`.`id` = `post_tag`.`tag_id` where `post_tag`.`post_id` = 6",
+   "time": "0.20",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 21,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "u68",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000002",
+  "type": "query",
+  "content": {
+   "connection": "mysql",
+   "bindings": [],
+   "sql": "select * from `tags` inner join `post_tag` on `tags`.`id` = `post_tag`.`tag_id` where `post_tag`.`post_id` = 7",
+   "time": "0.20",
+   "slow": false,
+   "file": "/var/www/app/app/Http/Controllers/PostController.php",
+   "line": 21,
+   "hash": "h"
+  }
+ },
+ {
+  "uuid": "r1",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "request",
+  "content": {
+   "uri": "/posts"
+  }
+ },
+ {
+  "uuid": "s1",
+  "batch_id": "9f1c2d3e-0000-4000-8000-000000000001",
+  "type": "query",
+  "content": "{\"sql\": \"select * from `settings` where `key` = 'site_name' limit 1\", \"time\": \"0.1\"}"
+ }
+]

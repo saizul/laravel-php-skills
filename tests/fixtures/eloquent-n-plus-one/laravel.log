@@ -1,0 +1,17 @@
+[2026-11-20 10:00:00] local.DEBUG: sql {"sql":"select * from \"orders\" where \"customer_id\" = 7","time":2.0,"request":"req-a"} 
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 100 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-a"}
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 101 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-a"}
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 102 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-a"}
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 103 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-a"}
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 104 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-a"}
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 105 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-a"}
+[2026-11-20 10:00:00] local.DEBUG: sql {"sql":"select * from \"orders\" where \"customer_id\" = 7","time":2.0,"request":"req-b"} 
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 100 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-b"}
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 101 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-b"}
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 102 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-b"}
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 103 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-b"}
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 104 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-b"}
+[2026-11-20 10:00:01] local.DEBUG: sql {"sql":"select * from \"order_items\" where \"order_items\".\"order_id\" = 105 and \"order_items\".\"order_id\" is not null","time":0.8,"request":"req-b"}
+[2026-11-20 10:00:02] local.ERROR: Attempted to lazy load [items] on model [App\Models\Order] but lazy loading is disabled. {"exception":"[object] (Illuminate\\Database\\LazyLoadingViolationException(code: 0)"}
+[2026-11-20 10:00:03] local.ERROR: Attempted to lazy load [items] on model [App\Models\Order] but lazy loading is disabled.
+[2026-11-20 10:00:03] local.INFO: unrelated message
