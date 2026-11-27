@@ -52,6 +52,9 @@ Paths below are relative to this skill's folder (in Claude Code: `${CLAUDE_SKILL
      Laravel 11+: `->change()` must repeat every modifier you want to keep (`nullable()`, `default()`).
    - **not-null-no-default**: add as nullable, backfill, then make it required.
    - **unique-on-existing / foreign-key**: check duplicates / orphans first (queries in the reference).
+   - **drop-index**: `dropUnique` lets duplicates in, `dropForeign` lets orphans in, and
+     `dropIndex`/`dropPrimary` can turn indexed queries into full scans. Add the replacement
+     index first and drop the old one in a later release.
    - **data-migration**: move large backfills to a queued job or artisan command that runs in chunks.
    - **missing-down / empty-down**: write `down()`, or say explicitly that the migration is
      one-way and rollback = restore from backup.

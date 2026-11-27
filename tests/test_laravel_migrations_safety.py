@@ -104,3 +104,54 @@ def test_cli(tmp_path):
     assert r.returncode == 0
     assert run_script(SKILL, SCRIPT, str(tmp_path / "nope")).returncode == 2
     assert run_script(SKILL, SCRIPT, "--help").returncode == 0
+
+
+DROPS = """public function up(): void {
+    Schema::table('orders', function (Blueprint $table) {
+        $table->dropIndex(['status', 'created_at']);
+        $table->dropUnique('orders_number_unique');
+        $table->dropForeign(['customer_id']);
+        $table->dropPrimary();
+        $table->dropConstrainedForeignId('coupon_id');
+        $table->dropForeignIdFor(Store::class);
+    });
+}
+public function down(): void { }"""
+
+
+def drops(tmp_path, big=()):
+    p = tmp_path / "2026_01_01_000000_drops.php"
+    p.write_text("<?php\nreturn new class extends Migration {\n" + DROPS + "\n};\n")
+    return mod.check_file(str(p), p.name, set(big))
+
+
+def test_drop_index_findings(tmp_path):
+    found = {(f.check, f.line, f.severity) for f in drops(tmp_path) if f.check != "empty-down"}
+    assert found == {
+        ("drop-index", 5, "low"),
+        ("drop-index", 6, "medium"),
+        ("drop-index", 7, "low"),
+        ("drop-index", 8, "low"),
+        ("drop-column", 9, "high"),
+        ("drop-column", 10, "high"),
+    }
+    titles = {f.line: f.title for f in drops(tmp_path)}
+    assert "duplicates" in titles[6] and "orphaned" in titles[7] and "full scans" in titles[5]
+
+
+def test_drop_index_on_big_table_is_medium(tmp_path):
+    sev = {f.line: f.severity for f in drops(tmp_path, {"orders"}) if f.check == "drop-index"}
+    assert sev == {5: "medium", 6: "medium", 7: "low", 8: "medium"}
+
+
+def test_drop_index_in_create_block_and_cli(tmp_path):
+    found = write(
+        tmp_path,
+        "public function up(): void { Schema::create('t', function (Blueprint $table) { $table->id(); "
+        "$table->dropIndex('t_x_index'); }); }\npublic function down(): void { Schema::dropIfExists('t'); }",
+    )
+    assert [f.check for f in found] == ["drop-index"]
+    res = run_script(SKILL, SCRIPT, str(tmp_path), "--json", "--fail-on", "low")
+    assert res.returncode == 1
+    assert json.loads(res.stdout)["counts"]["low"] == 1
+    assert run_script(SKILL, SCRIPT, str(tmp_path), "--fail-on", "medium").returncode == 0
