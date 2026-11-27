@@ -6,6 +6,17 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- `laravel-migrations-safety`: `drop-index` check for `dropIndex`, `dropPrimary`, `dropFullText`
+  and `dropSpatialIndex` (low, medium on `--big-tables`), `dropUnique` (medium) and
+  `dropForeign` (low).
+
+### Fixed
+
+- `laravel-migrations-safety`: `dropConstrainedForeignId()`, `dropConstrainedForeignIdFor()`
+  and `dropForeignIdFor()` drop the column too and are now reported as `drop-column` (high).
+
 ## [0.1.0] - 2026-11-25
 
 ### Added

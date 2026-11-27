@@ -9,6 +9,8 @@ Reads database/migrations/*.php as text and reports, per migration and line:
   unique-on-existing                    ->unique() on an existing table (fails on duplicates)
   index-on-big-table                    index/foreign key added to a table from --big-tables
   foreign-key                           ->foreign()/->constrained() added to an existing table
+  drop-index                            dropIndex/dropUnique/dropPrimary/dropForeign: slower queries
+                                        or lost uniqueness/referential integrity
   data-migration                        DB::table()->update(), Model::all(), chunk() in a migration
   raw-statement                         DB::statement()/DB::unprepared(): review manually
   missing-down / empty-down             no rollback path
@@ -187,7 +189,7 @@ def check_file(path: str, display: str, big_tables: set[str]) -> list[Finding]:
                 continue
             if re.search(
                 r"->(dropColumn|dropColumns|dropMorphs|dropTimestamps|dropSoftDeletes|"
-                r"dropRememberToken)\(",
+                r"dropRememberToken|dropConstrainedForeignId|dropConstrainedForeignIdFor|dropForeignIdFor)\(",
                 st,
             ):
                 add(
@@ -218,6 +220,33 @@ def check_file(path: str, display: str, big_tables: set[str]) -> list[Finding]:
                     "on big tables run online DDL (pt-online-schema-change/gh-ost) in a maintenance window.",
                 )
                 continue
+            drop_index = re.search(
+                r"->(dropIndex|dropUnique|dropPrimary|dropFullText|dropSpatialIndex|dropForeign)\(", st
+            )
+            if drop_index and not re.search(r"->dropConstrainedForeignId(For)?\(", st):
+                what = drop_index.group(1)
+                if what == "dropUnique":
+                    sev, title, fix = (
+                        "medium",
+                        f"drops a unique index on {table}: duplicates can be written from now on",
+                        "Keep the constraint unless the rule really changed; enforce it in code before dropping.",
+                    )
+                elif what == "dropForeign":
+                    sev, title, fix = (
+                        "low",
+                        f"drops a foreign key on {table}: orphaned rows are no longer prevented",
+                        "Make sure deletes are handled in code (or soft deletes) before removing the constraint.",
+                    )
+                else:
+                    sev, title, fix = (
+                        "medium" if big else "low",
+                        f"{what}() on {table}"
+                        + (" (big table)" if big else "")
+                        + ": queries that used the index may become full scans",
+                        "Check EXPLAIN for queries on these columns; add the replacement index first, "
+                        "drop the old one in a later release.",
+                    )
+                add(sev, "drop-index", pos, table, title, fix)
             if not existing:
                 continue
             col = re.match(rf"^\$\w+->({COLUMN_TYPES})\(\s*['\"](\w+)['\"]", st)
